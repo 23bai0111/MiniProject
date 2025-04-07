@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BMI & TDEE Calculator</title>
+  <link rel="stylesheet" href="style1.css"/>
+</head>
+<body>
+  <header>
+    <img src="VITLOGO.png" alt="VIT Logo" class="left-corner-image"/>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="bmi-box">
+      <h2>BMI & TDEE Calculator</h2>
+      <div class="bmi-inputs">
+        <div class="slider-container">
+          <label for="height">Height: <span id="heightValue">160</span> cm</label>
+          <input type="range" id="height" min="100" max="220" value="160" oninput="updateValue('height')" />
+        </div>
+        <div class="slider-container">
+          <label for="weight">Weight: <span id="weightValue">60</span> kg</label>
+          <input type="range" id="weight" min="30" max="200" value="60" oninput="updateValue('weight')" />
+        </div>
+        <div class="slider-container">
+          <label for="age">Age: <span id="ageValue">25</span> years</label>
+          <input type="range" id="age" min="10" max="100" value="25" oninput="updateValue('age')" />
+        </div>
+        <div class="dropdown-container">
+          <label for="gender">Gender:</label>
+          <select id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+        <div class="dropdown-container">
+          <label for="activity">Activity Level:</label>
+          <select id="activity">
+            <option value="1.2">Sedentary (Little to no exercise)</option>
+            <option value="1.375">Lightly active (1-3 days per week)</option>
+            <option value="1.55">Moderately active (3-5 days per week)</option>
+            <option value="1.725">Very active (6-7 days per week)</option>
+            <option value="1.9">Super active (Intense exercise, twice daily)</option>
+          </select>
+        </div>
+        <div class="dropdown-container">
+          <label for="goal">Goal:</label>
+          <select id="goal">
+            <option value="maintain">Maintain Weight</option>
+            <option value="lose">Lose Weight</option>
+            <option value="gain">Gain Weight</option>
+          </select>
+        </div>
+      </div>
+      <button class="calculate-btn" onclick="calculateBMI()">Calculate</button>
+      <p id="bmi-result"></p>
+      <p id="tdee-result"></p>
+    </div>
+
+    <div id="tdee-container" class="tdee-container">
+      <div class="graph-box">
+        <img id="bmiGraphImage" src="BMI adult.jpg" alt="BMI Chart" style="width: 100%; height: auto; display: none;" />
+      </div>
+
+      <div class="macros-box">
+        <div class="macro-item">
+          <img src="https://t3.ftcdn.net/jpg/10/16/70/98/360_F_1016709873_w3pBFTsDmCprkfUNGGhqP9jW1bMe8WQp.webp" alt="Protein" class="macro-icon" />
+          <p><span id="protein-grams">0</span>g Protein</p>
+        </div>
+        <div class="macro-item">
+          <img src="images/bakery-bread-clipart-illustration-vector-257849453-removebg-preview.png" alt="Carbohydrates" style="width: 40px; height: 40px;" />
+          <p><span id="carbs-grams">0</span>g Carbs</p>
+        </div>
+        <div class="macro-item">
+          <img src="images/download-removebg-preview.png" alt="Fats" class="macro-icon" />
+          <p><span id="fats-grams">0</span>g Fats</p>
+        </div>
+      </div>
+
+      <div class="diet-button-container" id="dietPlanContainer" style="display: none;">
+        <a href="diet.html" id="dietPlanLink">
+          <button id="dietPlanBtn">Get Diet Plan</button>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us</title>
+  <link rel="stylesheet" href="style1.css" />
+  <style>
+    .about-container {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      padding: 30px;
+      margin-top: 100px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      max-width: 700px;
+      text-align: center;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .about-container h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .team-list {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .team-list li {
+      font-size: 20px;
+      margin: 10px 0;
+    }
+
+    .about-description {
+      font-size: 18px;
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+
+    .back-button {
+      margin-top: 30px;
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #ff0055;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #d9004c;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="VITLOGO.png" alt="Logo" class="left-corner-image" />
+    
+  </header>
+
+  <div class="about-container">
+    <h1>About Us</h1>
+
+    <ul class="team-list">
+      <li><strong>Nischay N.</strong> — Reg No: 23BAI0111</li>
+      <li><strong>Tenidhar Reddy</strong> — Reg No: 23BCT0227</li>
+      <li><strong>Shriker Verma</strong> — Reg No: 23BCE0332</li>
+    </ul>
+
+    <p class="about-description">
+      We are a team of passionate developers working together to create a smart health app that helps users calculate their BMI, TDEE, and generate custom diet plans based on their lifestyle and mess type. Our goal is to make nutrition and fitness accessible and personalized for everyone.
+    </p>
+
+    <a href="index.html" class="back-button">← Back to Home</a>
+  </div>
+</body>
+</html>

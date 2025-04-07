@@ -1,0 +1,93 @@
+.diet-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  padding-top: 80px;
+}
+
+.diet-plan-box {
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: left;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  backdrop-filter: blur(10px);
+}
+
+.diet-plan-box h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.diet-plan-box h3 {
+  font-size: 22px;
+  margin-top: 20px;
+  text-decoration: underline;
+}
+
+.diet-plan-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.diet-plan-box li {
+  margin-bottom: 6px;
+  font-size: 18px;
+}
+
+.meal-total {
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #ffcc00;
+}
+
+.smaller-header {
+  padding: 8px 20px;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
+#diet-plan-result {
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 20px;
+  max-width: 600px;
+  margin: 100px auto 40px auto; /* Keeps it away from header */
+}
+
+#diet-plan-result h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#diet-plan-result h3 {
+  font-size: 18px;
+  margin: 15px 0 8px;
+  color: #ffcc00;
+}
+
+#diet-plan-result ul {
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+#diet-plan-result li {
+  font-size: 15px;
+  margin: 4px 0;
+}
+
+.meal-total {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #fff;
+}
